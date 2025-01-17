@@ -629,7 +629,7 @@ footer p {
   position: fixed;
   top: 0;
   left: 0;
-  width: 99vw; /* Full viewport width */
+  width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
   background-color: #1a1a1a;
   color: #0f0;
