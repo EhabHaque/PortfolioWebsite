@@ -26,7 +26,7 @@ window.onclick = function(event) {
 window.onload = function() {
   setTimeout(function() {
     document.querySelector('.terminal-loader').style.display = 'none';
-  }, 1000); // Hide after 5 seconds
+  }, 2000); // Hide after 5 seconds
 };
 
 
@@ -73,4 +73,21 @@ document.addEventListener("DOMContentLoaded", function () {
  
 });
 
-//////
+//////-------
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Stop observing once visible
+        }
+      });
+    },
+    { threshold: 0.1 } // Trigger when 10% of the element is visible
+  );
+
+  sections.forEach((section) => observer.observe(section));
+});

@@ -356,7 +356,7 @@ article .icon {
   
 }
 
-/*--123--*/
+/*-----*/
 
 /* PROJECTS SECTION */
 
@@ -368,6 +368,7 @@ article .icon {
   text-align: center; /* Fallback for centering text */
   margin-bottom: 1rem;
 }
+
 
 /* Title inside wrapper */
 #projects .title {
@@ -484,6 +485,16 @@ article .icon {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+.titlep{
+  top: 0; /* Stick the title at the top 
+  transform: translateX(-50%); /* Adjust positioning to truly center it */
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  z-index: 10; /* Ensure it stays above other elements */
+  background: white; /* Optional: White background to ensure title is visible */
+}
 
 
 
@@ -725,4 +736,17 @@ footer p {
   border-right: 0.2em solid green; /* Cursor */
   animation: typeAndDelete 4s steps(11) infinite, blinkCursor 0.5s step-end infinite alternate;
   margin-top: 1.5em;
+}
+
+/* About Me Fade */
+/* Fade-In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
