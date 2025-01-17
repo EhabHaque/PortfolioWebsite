@@ -5,10 +5,14 @@
 * {
   margin: 0;
   padding: 0;
+  
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  ;
+  
+  
 }
 
 html {
@@ -150,8 +154,9 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
+  padding-bottom: 4vh;
+  height: auto;
+  margin: 0 10rem 4vh;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -287,11 +292,6 @@ section {
   border-radius: 2rem;
 }
 
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
-}
 
 .details-container {
   padding: 1.5rem;
@@ -339,46 +339,154 @@ section {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 2.5rem;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 article {
   display: flex;
   width: 10rem;
-  justify-content: space-around;
+  justify-content: flex-start;
   gap: 0.5rem;
+  
 }
 
 article .icon {
   cursor: default;
+
+  
 }
+
+/*--123--*/
 
 /* PROJECTS SECTION */
 
+#projects-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically if needed */
+  width: 100%; /* Full width */
+  text-align: center; /* Fallback for centering text */
+  margin-bottom: 1rem;
+}
+
+/* Title inside wrapper */
+#projects .title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0 auto; /* Ensure it's centered */
+  text-align: center; /* Center the text */
+}
+
+
+/* Projects container */
 #projects {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto; /* Enable horizontal scroll when content overflows */
+  padding-bottom: 1rem; /* Space to show scrollbar */
+  justify-content: flex-start; /* Projects aligned to the left */
+  gap: 2rem; /* Space between project containers */
+}
+
+
+#projects .details-container {
+  position: relative;
+  border: 1px solid rgb(163, 163, 163);
+  border-radius: 1rem;
+  background: rgb(250, 250, 250);
+  padding: 1rem;
+  width: 250px; /* Maintain consistent project width */
+  flex-shrink: 0; /* Prevent projects from shrinking */
+  height: auto; /* Maintain natural height */
+}
+
+#projects .article-container {
   position: relative;
 }
 
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+#projects .project-box {
+  position: relative; /* Ensure that the overlay is positioned relative to this container */
 }
 
-.project-img {
+#projects .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%; /* Ensure images fit within project cards */
+  height: auto; /* Preserve image aspect ratio */
+  transition: opacity 0.3s ease; /* Smooth transition when image fades out */
 }
 
-.project-title {
-  margin: 1rem;
-  color: black;
+#projects .description-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure it takes up the entire width of the image */
+  height: 100%; /* Ensure it takes up the entire height of the image */
+  background: rgba(255, 255, 255, 0.9); /* Light overlay */
+  color: black; /* Change text color to improve readability */
+  display: flex;
+  justify-content: flex-start; /* Align text at the top */
+  align-items: flex-start;
+  opacity: 0; /* Initially hidden */
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+  overflow-y: auto; /* Allow scrolling if content exceeds container size */
+  max-height: 100%; /* Limit height to match the image */
+  padding-bottom: 20px; /* Optional: Padding for scrollbar space */
 }
 
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+#projects .details-container:hover .description-overlay {
+  opacity: 1; /* Show overlay when hovering */
 }
+
+/* Custom horizontal scrollbar for #projects */
+#projects::-webkit-scrollbar {
+  height: 12px; /* Adjust the height of the scrollbar */
+}
+
+#projects::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar thumb color */
+  border-radius: 5px; /* Rounded corners for the scrollbar thumb */
+  border: 2px solid #f1f1f1; /* Creates a gap between the track and thumb */
+}
+
+#projects::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker thumb color on hover */
+}
+
+#projects::-webkit-scrollbar-track {
+  background-color: #e0e0e0; /* Scrollbar track color */
+  border-radius: 5px; /* Match the track corners to the thumb */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/*Vertical Scroll Bar For Description*/
+
+#projects .description-overlay::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the vertical scrollbar */
+}
+
+#projects .description-overlay::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar thumb color */
+  border-radius: 5px; /* Rounded corners for the scrollbar thumb */
+  border: 2px solid #f1f1f1; /* Creates a gap between the track and thumb */
+}
+
+#projects .description-overlay::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker thumb color on hover */
+}
+
+#projects .description-overlay::-webkit-scrollbar-track {
+  background-color: #e0e0e0; /* Scrollbar track color */
+  border-radius: 5px; /* Match the track corners to the thumb */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+
+
 
 /* CONTACT */
 
@@ -386,7 +494,7 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  height: 20vh;
 }
 
 .contact-info-upper-container {
@@ -423,10 +531,198 @@ article .icon {
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
+  height: 10vh;
   margin: 0 1rem;
 }
 
 footer p {
   text-align: center;
+}
+
+
+/* Modal for resumes */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0); /* Black background */
+  background-color: rgba(0,0,0,0.4); /* Black with transparency */
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Set width of the modal */
+  text-align: center;
+}
+
+.modal-btn {
+  width: 100%; /* Adjust width to fill container */
+  padding: 1rem; /* Adjust padding */
+  font-size: 1.25rem; /* Adjust font size for consistency */
+  border-radius: 2rem; /* Keep rounded corners consistent */
+  margin: 0.5rem 0; /* Add space between buttons */
+}
+
+/* Optional: Ensure buttons have consistent appearance */
+.modal-btn.btn-color-1 {
+  background-color: rgb(53, 53, 53); /* Use your desired background */
+  color: white;
+}
+
+.modal-btn.btn-color-2 {
+  background-color: none;
+  border: 1px solid rgb(53, 53, 53); /* Border for color contrast */
+  color: rgb(53, 53, 53); /* Use desired text color */
+}
+
+/* Loader container to cover the entire viewport */
+/* Initially hide the articles */
+.experience-item {
+  opacity: 0;
+  transform: translateY(30px); /* Optional: adds a slight vertical movement */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* The class to apply when the item is in view */
+.experience-item.visible {
+  opacity: 1;
+  transform: translateY(0); /* Reset transform when visible */
+}
+
+/* Optional: Add a delay for each article to stagger their appearance */
+.experience-item:nth-child(1) {
+  transition-delay: 0.3s;
+}
+
+.experience-item:nth-child(2) {
+  transition-delay: 0.5s;
+}
+
+.experience-item:nth-child(3) {
+  transition-delay: 0.7s;
+}
+
+/*Loading Page*/
+
+.terminal-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-color: #1a1a1a;
+  color: #0f0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  padding: 1.5em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  border: 0.1em solid #333;
+  z-index: 9999; /* Ensure it's on top of other content */
+}
+
+/* Fade Out Effect */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Cursor Blinking */
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+/* Typing Effect */
+@keyframes typeAndDelete {
+  0%,
+  10% {
+    width: 0;
+  }
+  45%,
+  55% {
+    width: 8.2em; /* Adjust based on content width */
+  }
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+/* Terminal Header Styles */
+.terminal-loader .terminal-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5em;
+  background-color: #333;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 0 0.4em;
+  box-sizing: border-box;
+}
+
+/* Terminal Controls */
+.terminal-loader .terminal-controls {
+  float: right;
+}
+
+.terminal-loader .control {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.4em;
+  border-radius: 50%;
+  background-color: #777;
+}
+
+.terminal-loader .control.close {
+  background-color: #e33;
+}
+
+.terminal-loader .control.minimize {
+  background-color: #ee0;
+}
+
+.terminal-loader .control.maximize {
+  background-color: #0b0;
+}
+
+.terminal-loader .terminal-title {
+  float: left;
+  line-height: 1.5em;
+  color: #eee;
+}
+
+/* Text Animation */
+.terminal-loader .text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.2em solid green; /* Cursor */
+  animation: typeAndDelete 4s steps(11) infinite, blinkCursor 0.5s step-end infinite alternate;
+  margin-top: 1.5em;
 }
