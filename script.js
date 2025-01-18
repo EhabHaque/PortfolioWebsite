@@ -5,23 +5,6 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-// Function to open the modal
-function openModal() {
-  document.getElementById("resumeModal").style.display = "block";
-}
-
-// Function to close the modal
-function closeModal() {
-  document.getElementById("resumeModal").style.display = "none";
-}
-
-// Close the modal if the user clicks outside of it
-window.onclick = function(event) {
-  if (event.target === document.getElementById("resumeModal")) {
-    closeModal();
-  }
-}
-
 //Loading Page
 window.onload = function() {
   setTimeout(function() {
