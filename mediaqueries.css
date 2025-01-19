@@ -81,7 +81,7 @@
 #projects {
   display: flex;
   flex-wrap: wrap;
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-x: auto; /* Hide horizontal scrollbar */
   padding-bottom: 1rem; /* Space to show scrollbar */
   justify-content: flex-start; /* Projects aligned to the left */
   gap: 2rem; /* Space between project containers */
@@ -127,7 +127,30 @@
   margin: 0 auto; /* Center the image horizontally */
 }
 
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background: rgb(235, 235, 235);
+  border-radius: 5px;
+  /* You can also style the thumb */
+}
 
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(100, 100, 255); /* RGB slider thumb color */
+  cursor: pointer;
+}
+
+/* You can adjust the appearance of the track (the bar behind the thumb) */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: rgb(0, 0, 0);
+  height: 10px;
+  border-radius: 5px;
+}
 
 }
 
