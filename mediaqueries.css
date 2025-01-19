@@ -155,20 +155,22 @@
 }
 
 #projects::-webkit-scrollbar-thumb {
-  background-color: #888; /* Scrollbar thumb color */
+  background-image: linear-gradient(45deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); /* Gradient for thumb */
   border-radius: 5px; /* Rounded corners for the scrollbar thumb */
   border: 2px solid #f1f1f1; /* Creates a gap between the track and thumb */
 }
 
 #projects::-webkit-scrollbar-thumb:hover {
   background-color: #555; /* Darker thumb color on hover */
+  background-image: linear-gradient(45deg, #4c00ff 0%, #00d4ff 46%, #ff9c00 100%); /* Gradient on hover */
 }
 
 #projects::-webkit-scrollbar-track {
-  background-color: #e0e0e0; /* Scrollbar track color */
+  background-image: linear-gradient(45deg, #e0e0e0 0%, #f0f0f0 100%); /* Gradient for track */
   border-radius: 5px; /* Match the track corners to the thumb */
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+
 
 }
 
