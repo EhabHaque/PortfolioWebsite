@@ -75,14 +75,3 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach((section) => observer.observe(section));
 });
 
-const slider = document.getElementById("myRange");
-const projectsContainer = document.getElementById("projects");
-
-slider.addEventListener("input", function() {
-  // Calculate the scroll position based on the slider's value
-  const maxScroll = projectsContainer.scrollWidth - projectsContainer.clientWidth;
-  const scrollPosition = (slider.value / 100) * maxScroll;
-  
-  // Set the scroll position of the projects container
-  projectsContainer.scrollLeft = scrollPosition;
-});
