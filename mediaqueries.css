@@ -333,15 +333,11 @@
   }
 
   #projects .project-box {
-    display: flex;
-    justify-content: flex-start;
-    position: sticky; /* Ensure that the overlay is positioned relative to this container */
+    position: relative; /* Ensure that the overlay is positioned relative to this container */
     left:25px;
     max-height:600px;
     max-width: 350px;
   }
-
-  
 
 }
 
