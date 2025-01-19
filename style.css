@@ -576,8 +576,8 @@ footer p {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full viewport width */
+  height: 100%; /* Full viewport height */
   background-color: #1a1a1a;
   color: #0f0;
   font-family: "Courier New", Courier, monospace;
