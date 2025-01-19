@@ -17,7 +17,205 @@
     width: 250px;
     margin: auto 0;
   }
+
+  .experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .article-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Single column by default */
+    gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+    text-align: initial;
+  }
+  
+  article {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  article .icon {
+    cursor: default;
+  }
+
+  .article-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  }
+
+
+/* Certificates Section Only Changing box layouts*/
+.details-container:last-of-type .article-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three items per row */
+  gap: 1.5rem; /* Space between items */
+  justify-items: center; /* Center each article in its grid cell */
 }
+
+.details-container:last-of-type article {
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  align-items: center; /* Vertically align icon and text */
+  justify-content: flex-start; /* Ensure items stay aligned to the left within the article */
+  gap: 1rem; /* Space between icon and text */
+  width: 100%; /* Make articles take the full width of their grid cell */
+}
+
+.details-container:last-of-type .article-container > article div {
+  text-align: left; /* Ensure text is aligned to the left */
+}
+
+/* Projects */
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  padding-bottom: 1rem; /* Space to show scrollbar */
+  justify-content: flex-start; /* Projects aligned to the left */
+  gap: 2rem; /* Space between project containers */
+  box-sizing: border-box; /* Ensure padding doesn't affect layout */
+  margin-left: 20;
+  margin-right: 20;
+  margin-top: 0;
+  margin-bottom: 30px; /* Adjust the bottom margin if needed */
+}
+
+.scroll-container {
+  display: flex; /* Make the container a flexbox */
+  flex-direction: column; /* Stack child elements vertically (optional, based on your design needs) */
+  justify-content: center; /* Vertically center child elements */
+  align-items: center; /* Horizontally center child elements */
+  height: 65vh; /* Ensure the container takes the full height of the viewport */
+  padding: 20px; /* Optional: Add padding for spacing inside the container */
+  box-sizing: border-box; /* Make sure padding doesn't overflow the container */
+  overflow-y: auto; /* Allow scrolling if content overflows vertically */
+  overflow-x: scroll;
+}
+
+/* Controls the individual project box's width */
+#projects .details-container {
+  position: relative;
+  justify-content: center;
+  border: 1px solid rgb(163, 163, 163);
+  border-radius: 1rem;
+  background: rgb(250, 250, 250);
+  padding: 1rem;
+  flex-shrink: 0; /* Prevent projects from shrinking */
+  height: auto; /* Maintain natural height */
+}
+
+#projects .project-img {
+  border-radius: 2rem;
+  position: center;
+  justify-content: center;
+  width: 200px; /* Ensure images fit within project cards */
+  height: auto; /* Preserve image aspect ratio */
+  transition: opacity 0.3s ease; /* Smooth transition when image fades out */
+  object-fit: contain; /* Ensure the image doesn't stretch */
+  display: block; /* Make it behave like a block element */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+
+/* Vertical Scroll Bar For Description */
+#projects .description-overlay::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the vertical scrollbar */
+}
+
+#projects .description-overlay::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar thumb color */
+  border-radius: 5px; /* Rounded corners for the scrollbar thumb */
+  border: 2px solid #f1f1f1; /* Creates a gap between the track and thumb */
+}
+
+#projects .description-overlay::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker thumb color on hover */
+}
+
+#projects .description-overlay::-webkit-scrollbar-track {
+  background-color: #e0e0e0; /* Scrollbar track color */
+  border-radius: 5px; /* Match the track corners to the thumb */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+
+.project-details-container::-webkit-scrollbar {
+  height: 10px; /* Adjust the height of the scrollbar */
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.project-details-container::-webkit-scrollbar-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4c00ff;
+  background-image: linear-gradient(160deg, #4900f5 0%, #80D0C7 100%);
+  cursor: pointer;
+}
+
+.project-details-container::-webkit-scrollbar-thumb:hover {
+  background-color: #3a00cc; /* Darker thumb color on hover */
+}
+
+.project-details-container::-webkit-scrollbar-track {
+  background-color: #e0e0e0; /* Scrollbar track color */
+  border-radius: 5px; /* Match the track corners to the thumb */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Apply to the nested .about-containers.scroll-container */
+.about-containers.scroll-container::-webkit-scrollbar {
+  height: 10px; /* Adjust the height of the scrollbar */
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.about-containers.scroll-container::-webkit-scrollbar-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4c00ff;
+  background-image: linear-gradient(160deg, #4900f5 0%, #80D0C7 100%);
+  cursor: pointer;
+}
+
+.about-containers.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #3a00cc; /* Darker thumb color on hover */
+}
+
+.about-containers.scroll-container::-webkit-scrollbar-track {
+  background-color: #e0e0e0; /* Scrollbar track color */
+  border-radius: 5px; /* Match the track corners to the thumb */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+}
+
+
 
 @media screen and (max-width: 1200px) {
   #desktop-nav {
@@ -52,6 +250,8 @@
   .about-containers {
     margin-top: 0;
   }
+
+  
 }
 
 @media screen and (max-width: 600px) {
