@@ -305,9 +305,6 @@
     max-height: 1000px;
   }
 
-  #projects{
-  padding-right: 100px;
-  }
   #projects .description-overlay {
     position: absolute;
     top: 0;
