@@ -75,3 +75,13 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach((section) => observer.observe(section));
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const headers = document.querySelectorAll("#experience .article-header");
+  
+  headers.forEach(header => {
+    header.addEventListener("click", function() {
+      const container = header.parentElement;
+      container.classList.toggle("open"); // Toggle the open class on click
+    });
+  });
+});
