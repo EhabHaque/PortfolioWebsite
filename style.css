@@ -331,6 +331,8 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  gap: 20px;
+  
 }
 
 .article-container {
@@ -355,6 +357,8 @@ article .icon {
 
   
 }
+
+
 
 /* PROJECTS 123 SECTION */
 
