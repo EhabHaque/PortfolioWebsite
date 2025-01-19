@@ -304,11 +304,7 @@
   #experience .article-container:hover {
     max-height: 1000px;
   }
-
-  #projects{
-    border: 5px solid #ddd;
-    border-radius: 5px;
-  }
+  
 
   #projects .description-overlay {
     position: absolute;

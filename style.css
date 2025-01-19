@@ -372,6 +372,17 @@ article .icon {
 
 /* PROJECTS SECTION */
 
+.project-title{
+  top: 0; /* Stick the title at the top 
+  transform: translateX(-50%); /* Adjust positioning to truly center it */
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  z-index: 10; /* Ensure it stays above other elements */
+  background: white; /* Optional: White background to ensure title is visible */
+}
+
 .titlep{
   top: 0; /* Stick the title at the top 
   transform: translateX(-50%); /* Adjust positioning to truly center it */
