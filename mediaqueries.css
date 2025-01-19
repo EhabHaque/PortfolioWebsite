@@ -97,7 +97,7 @@
   flex-direction: column; /* Stack child elements vertically (optional, based on your design needs) */
   justify-content: center; /* Vertically center child elements */
   align-items: center; /* Horizontally center child elements */
-  height: 65vh; /* Ensure the container takes the full height of the viewport */
+  height: 80vh; /* Ensure the container takes the full height of the viewport */
   padding: 20px; /* Optional: Add padding for spacing inside the container */
   box-sizing: border-box; /* Make sure padding doesn't overflow the container */
   overflow-y: auto; /* Allow scrolling if content overflows vertically */
