@@ -286,21 +286,14 @@
     display: flex; /* Make it a flex container */
     flex-direction: column; /* Arrange items vertically */
     flex-wrap:wrap;
-    width: 100%;
-    border: 6px solid #ddd;
+    width: 300px;
+    border: 5px solid #ddd;
     border-radius: 5px;
     overflow:scroll;
     transition: max-height 0.3s ease-in-out;
-    max-height: 0;
+    max-height: 1000px;
   }
   
-  #experience .article-container.open {
-    max-height: 600px;
-  }
-
-  #experience .article-header:hover {
-    background-color: #e0e0e0;
-  }
 
   #experience .article-content {
     padding: 10px 15px;
@@ -312,16 +305,6 @@
     max-height: 1000px;
   }
 
-  /* Arrow Indicator */
-  #experience .article-header::after {
-    content: "▼";
-    float: right;
-    transition: transform 0.3s ease;
-  }
-
-  #experience .article-container.open .article-header::after {
-    transform: rotate(180deg);
-  }
 
   #projects .description-overlay {
     position: absolute;
@@ -350,11 +333,15 @@
   }
 
   #projects .project-box {
+    display: flex;
+    justify-content: flex-start;
     position: relative; /* Ensure that the overlay is positioned relative to this container */
     left:25px;
     max-height:600px;
     max-width: 350px;
   }
+
+  
 
 }
 
