@@ -287,7 +287,7 @@
     flex-direction: column; /* Arrange items vertically */
     flex-wrap:wrap;
     width: 100%;
-    border: 3px solid #ddd;
+    border: 6px solid #ddd;
     border-radius: 5px;
     overflow:scroll;
     transition: max-height 0.3s ease-in-out;
