@@ -80,8 +80,7 @@
 
 #projects {
   display: flex;
-  flex-wrap: wrap;
-  overflow-x: auto; /* Hide horizontal scrollbar */
+ 
   padding-bottom: 1rem; /* Space to show scrollbar */
   justify-content: flex-start; /* Projects aligned to the left */
   gap: 2rem; /* Space between project containers */
@@ -90,6 +89,10 @@
   margin-right: 20;
   margin-top: 0;
   margin-bottom: 30px; /* Adjust the bottom margin if needed */
+
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: scroll; /* Always show scrollbar */
+
 }
 
 .scroll-container {
@@ -118,19 +121,28 @@
 
 #projects .project-img {
   border-radius: 2rem;
-  justify-content: center;
-  width: 200px; /* Ensure images fit within project cards */
+  justify-content: space-around;
+  width: 250px; /* Ensure images fit within project cards */
   height: auto; /* Preserve image aspect ratio */
   transition: opacity 0.3s ease; /* Smooth transition when image fades out */
   object-fit: contain; /* Ensure the image doesn't stretch */
-  display: block; /* Make it behave like a block element */
   margin: 0 auto; /* Center the image horizontally */
 }
+
 
 #projects .details-container .color-container{
   justify-content: center;
   display: flex; /* Make sure flexbox is applied to center content */
+  
 }
+
+/* This let me change the spacing in the image */
+#projects .project-box {
+  position: relative;
+  width: 94%;
+}
+
+
 
 }
 

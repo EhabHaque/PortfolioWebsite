@@ -489,31 +489,7 @@ article .icon {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  /* Adjust project container width on smaller devices */
-  .projects-details-container {
-    width: 100%;
-    padding: 1rem;
-    gap: 1rem;
-  }
 
-  /* Stack the project boxes on smaller screens */
-  #projects .details-container {
-    width: 100%; /* Full width on smaller screens */
-    margin-bottom: 1rem;
-  }
-
-  /* Reduce the font size of the project title for smaller screens */
-  .project-title {
-    font-size: 1.5rem;
-  }
-
-  /* Adjust the description overlay size */
-  #projects .description-overlay {
-    padding: 10px;
-  }
-}
 
 
 
