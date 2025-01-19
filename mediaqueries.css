@@ -305,7 +305,9 @@
     max-height: 1000px;
   }
 
-
+  #projects{
+  padding-left: 50px;
+  }
   #projects .description-overlay {
     position: absolute;
     top: 0;
@@ -319,7 +321,6 @@
     align-items: flex-start;
     opacity: 1;
     padding: 0 20px;
-    padding-left: 50px;
     box-sizing: border-box;
     border-radius: 1rem;
     transition: opacity 0.3s ease-in-out;
