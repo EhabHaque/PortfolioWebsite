@@ -177,6 +177,32 @@
     margin-top: 0;
   }
 
+    #projects .description-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it takes up the entire width of the image */
+    height: 100%; /* Ensure it takes up the entire height of the image */
+    background: rgba(255, 255, 255, 0.9); /* Light overlay */
+    color: black; /* Change text color to improve readability */
+    display: flex;
+    justify-content: flex-start; /* Align text at the top */
+    align-items: flex-start;
+    opacity: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+    overflow-y: auto; /* Allow scrolling if content exceeds container size */
+    max-height: 100%; /* Limit height to match the image */
+    padding-bottom: 20px; /* Optional: Padding for scrollbar space */
+  }
+  
+  #projects .details-container:hover .description-overlay {
+    opacity: 10%; /* Show overlay when hovering */
+  }
+
   
 }
 
@@ -185,6 +211,16 @@
   footer {
     height: 40vh;
   }
+
+  #contact   .contact-info-upper-container{
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center content vertically */
+    flex-wrap: wrap;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center the text itself */
+  }
+
   #profile {
     height: 83vh;
     margin-bottom: 0;
@@ -230,9 +266,96 @@
   .title {
     font-size: 2rem;
   }
-  .text-container {
-    text-align: justify;
+  .titlep {
+    font-size: 2rem;
   }
+  .text-container {
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100%; /* Ensure the container has height for centering */
+    text-align: center; /* Center the text itself */
+  }
+  
+  .text-container p {
+    margin: 0; /* Reset margins for proper centering */
+  }
+
+ #experience .article-container {
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Arrange items vertically */
+    flex-wrap:wrap;
+    width: 100%;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+    overflow:scroll;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+  }
+  
+  #experience .article-container.open {
+    max-height: 600px;
+  }
+
+  #experience .article-header:hover {
+    background-color: #e0e0e0;
+  }
+
+  #experience .article-content {
+    padding: 10px 15px;
+    display: block;
+  }
+
+  #experience .article-header:focus + .article-content,
+  #experience .article-container:hover {
+    max-height: 1000px;
+  }
+
+  /* Arrow Indicator */
+  #experience .article-header::after {
+    content: "▼";
+    float: right;
+    transition: transform 0.3s ease;
+  }
+
+  #experience .article-container.open .article-header::after {
+    transform: rotate(180deg);
+  }
+
+  #projects .description-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it takes up the entire width of the image */
+    height: 100%; /* Ensure it takes up the entire height of the image */
+    background: rgba(255, 255, 255, 0.9); /* Light overlay */
+    color: black; /* Change text color to improve readability */
+    display: flex;
+    justify-content: flex-start; /* Align text at the top */
+    align-items: flex-start;
+    opacity: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+    overflow-y: auto; /* Allow scrolling if content exceeds container size */
+    max-height: 100%; /* Limit height to match the image */
+    padding-bottom: 20px; /* Optional: Padding for scrollbar space */
+  }
+  
+  #projects .details-container:hover .description-overlay {
+    opacity: 10%; /* Show overlay when hovering */
+  }
+
+  #projects .project-box {
+    position: relative; /* Ensure that the overlay is positioned relative to this container */
+    left:25px;
+    max-height:600px;
+    max-width: 350px;
+  }
+
 }
 
 /* */
